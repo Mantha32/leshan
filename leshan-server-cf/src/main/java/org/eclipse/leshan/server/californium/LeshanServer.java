@@ -333,6 +333,9 @@ public class LeshanServer {
         } else if (requestSender instanceof Stoppable) {
             ((Stoppable) requestSender).stop();
         }
+
+        presenceService.destroy();
+
         LOG.info("LWM2M server destroyed.");
     }
 
